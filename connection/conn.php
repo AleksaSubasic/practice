@@ -1,3 +1,4 @@
+<!-- Connection with database -->
 <?php 
 try {
     $server = "localhost";
