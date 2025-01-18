@@ -1,3 +1,7 @@
+<?php
+include("connection/conn.php");
+include("models/functions.php");
+?>
 <!doctype html>
 <html lang="en">
 
@@ -10,5 +14,5 @@
 </head>
 
 <body>
-
+    <!-- Navigation included -->
     <?php include("templates/nav.php"); ?>
