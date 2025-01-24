@@ -45,4 +45,30 @@ function markTaskAsDone($id)
 
     return $res;
 }
+
+function updateTask($id, $title, $desc)
+{
+    global $conn;
+    $query = "UPDATE tasks SET title = ?, description = ? WHERE id = ?";
+
+    $ps = $conn->prepare($query);
+    $ps->bindValue(1, $title);
+    $ps->bindValue(2, $desc);
+    $ps->bindValue(3, $id);
+    $res = $ps->execute();
+
+    return $res;
+}
+
+function deleteTask($id)
+{
+    global $conn;
+    $query = "DELETE FROM tasks WHERE id = ?";
+
+    $ps = $conn->prepare($query);
+    $ps->bindValue(1, $id);
+    $res = $ps->execute();
+
+    return $res;
+}
 ?>

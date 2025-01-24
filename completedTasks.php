@@ -16,7 +16,7 @@ $data = getCompletedTasks();
                     <h4><?= $task->title; ?></h4>
                     <p><?= $task->description; ?></p>
                     <div class="d-flex align-self-end mt-auto">
-                        <a href="#" class="btn btn-outline-danger me-3">Delete</a>
+                        <a href="models/deleteTask.php?id=<?= $task->id ?>" class="btn btn-outline-danger me-3">Delete</a>
                         <a href="models/markAsDone.php?id=<?= $task->id ?>" class="btn <?= $task->isDone ? 'btn-dark disabled' : 'btn-dark' ?>"><?= $task->isDone ? 'Completed' : 'Mark as done' ?></a>
                     </div>
                 </div>

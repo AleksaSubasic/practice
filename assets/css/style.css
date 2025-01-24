@@ -3,7 +3,6 @@
 }
 .task{
     width: 500px;
-    /* min-height: 150px; */
 }
 .task form input, .task form textarea{
     background-color: #fcfcfd;

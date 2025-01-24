@@ -2,13 +2,11 @@
 include("../connection/conn.php");
 include("functions.php");
 
-$id = $_POST['id'];
+$id = $_GET['id'];
 
-$res = markTaskAsDone($id);
-
+$res = deleteTask($id);
 if ($res) {
-    header("Location: ../index.php");
-    exit();
+    header("Location: ../completedTasks.php");
 } else {
     http_response_code(500);
     echo "Error: check connection or query!";
